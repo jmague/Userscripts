@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Show/hide chat
 // @namespace    http://tampermonkey.net/
-// @version      17.2.1
+// @version      17.2.2
 // @description  Show or hide all chat messages
 // @match        *://chat.stackexchange.com/rooms/*
 // @match        *://chat.stackoverflow.com/rooms/*
@@ -27,6 +27,10 @@
     var mon = document.getElementsByClassName('monologue');
     for (var i = 0; i < mon.length; i++) {
       mon[i].style.display = shown ? 'none': 'block';
+    }
+    var elems = [document.getElementById('info'), document.getElementById('room-ad'), document.getElementById('starred-posts')];
+    for (i = 0; i < elems.length; i++) {
+      elems[i].style.display = shown ? 'none': 'block';
     }
     shown = !shown;
   }
