@@ -34,15 +34,15 @@
   $.getJSON(request, function(data) {
     if (data.items) {
       for (var i = 0; i < data.items.length; i++) {
-	    var q = data.items[i];
-	    if (q.owner && (q.owner.reputation < minRep)) {
-	  	  var resultToHide = document.getElementById("question-summary-" + q.question_id);
-		  if (resultToHide) {
-		    resultToHide.remove();
-		  }
-		}
-	  }
-	}
+        var q = data.items[i];
+        if (q.owner && (q.owner.reputation < minRep)) {
+          var resultToHide = document.getElementById("question-summary-" + q.question_id);
+          if (resultToHide) {
+            resultToHide.remove();
+          }
+        }
+      }
+    }
   });
 
 })();
