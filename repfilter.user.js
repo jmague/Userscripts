@@ -20,13 +20,13 @@
 
   var minRep = document.location.href.match(/is%3A(\d+)/i);
   if (!minRep) {
-	return;
+    return;
   }
   minRep = parseInt(minRep[1], 10);
   var site = document.location.hostname.split(".")[0];
   var links = document.querySelectorAll(".result-link a");
   var postIds = Array.from(links).map(function (a) {
-	return a.href.split("/")[4];
+    return a.href.split("/")[4];
   });
   var apiKey = "SHlJ4RSv6D2U2*uPaAFCww((";
   var filter = "!w-(NS0vUDHvs3-bCGM";
