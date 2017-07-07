@@ -3,6 +3,7 @@
 // @namespace   https://github.com/normalhuman/
 // @description With queries such as is:q intags:mine is:20, hides the questions where OP's reputation is under 20.
 // @description Include some search parameter that requires questions, like is:q does above (closed:0 is a good choice).
+// @description The script overloads is: parameter instead of introducing a new one, because any unrecognized parameter would be treated as a part of search query
 // @match       *://*.askubuntu.com/search*
 // @match       *://*.mathoverflow.net/search*
 // @match       *://*.serverfault.com/search*
