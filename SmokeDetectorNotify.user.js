@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         SmokeDetector notifications
 // @namespace    Smokey
-// @version      16.6.1
+// @version      18.3.1
 // @description  Beep when Smokey talks
 // @description  Based on Chrome extension https://chrome.google.com/webstore/detail/fight-spam-on-se-sites/pkpdgmdicibddkgkikdfnaggkdobhmgk
 // @author       Normal Human
@@ -36,7 +36,7 @@ function checkForSpam() {
 
 
 function processChatMessage(message) {
-  var smoke = /\[ SmokeDetector \]/;
+  var smoke = /\[ SmokeDetector/;
   var content = message.children[1].textContent;
   var i, msg = {}, parts, ch, path, hash, site = '', qId = '', sq;
   if (smoke.test(content)) {
