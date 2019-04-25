@@ -21,7 +21,7 @@ function toISO() {
       var timestamp = rowElements[8].firstElementChild;
       if (!/:/.test(timestamp.textContent)) {
         var parts = timestamp.title.split(/, | | at /);
-        if (parts.length == 7) {
+        if (parts.length == 6) {
           var month = 1 + ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'].indexOf(parts[1]);
           timestamp.textContent = parts[3] + '-' + ('0' + month).slice(-2) + '-' + ('0' + parts[2]).slice(-2);
         }
