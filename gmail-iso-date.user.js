@@ -17,8 +17,8 @@ function toISO() {
   var rows = document.getElementsByTagName('tr');
   for (var i = 0; i < rows.length; i++) {
     var rowElements = rows[i].children;
-    if (rowElements.length == 8) {
-      var timestamp = rowElements[7].firstElementChild;
+    if (rowElements.length == 10) {
+      var timestamp = rowElements[8].firstElementChild;
       if (!/:/.test(timestamp.textContent)) {
         var parts = timestamp.title.split(/, | | at /);
         if (parts.length == 7) {
